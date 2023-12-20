@@ -1,0 +1,20 @@
+# Stage 1: Build the application
+FROM rust:latest as builder
+
+WORKDIR /usr/src/app
+
+ENV ROCKET_ADDRESS=0.0.0.0
+
+COPY ./Cargo.toml ./Cargo.toml
+COPY ./src ./src
+
+RUN cargo build --release
+
+# Stage 2: Create a minimal runtime image
+FROM debian:buster-slim
+
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app/target/debug/hw /usr/src/app/hw
+
+CMD ["./target/debug/hw"]

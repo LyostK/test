@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wasmpot-deployment
+  namespace: wasmpot-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wasmpot
+  template:
+    metadata:
+      labels:
+        app: wasmpot
+    spec:
+      containers:
+      - name: wasmpot-container
+        image: wasmpot/wasmpotimage:v1.0
+        ports:
+        - containerPort: 8000
