@@ -27,20 +27,22 @@ KVVERSION="v0.6.3"
 k3sVersion="v1.26.10+k3s2"
 
 # Set the IP addresses of the master and work nodes
-master1=10.10.30.230
-master2=10.10.30.185
-master3=10.10.30.193
-worker1=10.10.30.195
-worker2=10.10.30.233
+master1=10.10.30.167
+master2=10.10.30.153
+master3=10.10.30.125
+worker1=10.10.30.245
+worker2=10.10.30.168
 
 # Workers :
-# 105(wasmpot5) : Worker —> 10.10.30.233
-# 104(wasmpot4) : Worker —> 10.10.30.195
-# 103(wasmpot3) : Worker —> 10.10.30.193
+# 103(wasmpot5) : Worker —> 10.10.30.245
+# 104(wasmpot4) : Worker —> 10.10.30.168
+# ---------- 105(wasmpot3) : Worker —> 10.10.30.193 -----------
 
 # Masters :
-# 101(wasmpot1) : Master —> 10.10.30.230
-# 102(wasmpot2) : Master —> 10.10.30.185
+# 100: Master1=10.10.30.167
+# 101: Master=10.10.30.153
+# 102: Master=10.10.30.125
+
 
 # ADRESSE IP 100(vm 100) -> 10.10.30.121
 
