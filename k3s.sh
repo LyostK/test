@@ -47,7 +47,7 @@ worker2=10.10.30.168
 # ADRESSE IP 100(vm 100) -> 10.10.30.121
 
 # User of remote machines
-user=wasmpot_1
+user=ubuntu
 
 # Interface used on remotes
 interface=eth0
