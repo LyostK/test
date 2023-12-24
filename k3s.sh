@@ -202,4 +202,18 @@ kubectl get nodes
 kubectl get svc
 kubectl get pods --all-namespaces -o wide
 
+
+
+# installer Kata Containers sur chaque VM
+#for node in "${all[@]}"; do
+#  ssh $user@$node -i ~/.ssh/$certName <<- EOF
+#    sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/katacontainers:/releases:/x86_64:/stable-1.11/Debian_Unstable/ /' > /etc/apt/sources.list.d/kata-containers.list"
+#    sudo sh -c "echo 'deb http://download.opensuse.org/repositories/network:/osm:/stable-1.11/Debian_Unstable/ /' >> /etc/apt/sources.list.d/kata-containers.list"
+#    wget -q -O - https://download.opensuse.org/repositories/home:katacontainers:releases:x86_64:stable-1.11/Debian_Unstable/Release.key | sudo apt-key add -
+#    wget -q -O - https://download.opensuse.org/repositories/network:osm:stable-1.11/Debian_Unstable/Release.key | sudo apt-key add -
+#    sudo apt-get update
+#    sudo apt-get -y install kata-runtime kata-proxy kata-shim
+# EOF
+#done
+
 echo -e " \033[32;5mHappy Kubing! Access Nginx at EXTERNAL-IP above\033[0m"
